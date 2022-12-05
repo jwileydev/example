@@ -10,9 +10,7 @@ from example_app.models import Product, ProductUserEngagement
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
+    # API endpoint that allows users to be viewed or edited.
 
     queryset = User.objects.all().order_by("-date_joined")
     serializer_class = UserSerializer
@@ -20,9 +18,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 class GroupViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
+    # API endpoint that allows groups to be viewed or edited.
 
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
@@ -30,9 +26,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 
 class ProductViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows Product to be viewed or edited.
-    """
+    # API endpoint that allows Product to be viewed or edited.
 
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -40,9 +34,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 
 class ProductUserEngagementViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows ProductUserEngagements to be viewed or edited.
-    """
+    # API endpoint that allows ProductUserEngagements to be viewed or edited.
 
     queryset = ProductUserEngagement.objects.all()
     serializer_class = ProductUserEngagementSerializer
